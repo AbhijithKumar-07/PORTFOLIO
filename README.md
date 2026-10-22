@@ -2,16 +2,6 @@
 
 A high-performance, visually stunning developer portfolio featuring an interactive neural network background, dynamic theme switching, and automated multi-platform contest rating synchronization.
 
-## 🖼️ Visual Showcase
-
-| **Glass-Dark Mode** | **Pristine-Light Mode** |
-|:---:|:---:|
-| ![Hero Dark](./public/screenshots/hero-dark.png) | ![Hero Light](./public/screenshots/hero-light.png) |
-
-### 🛠️ Key Modules
-| **Contest Manager** | **Technical Arsenal** |
-|:---:|:---:|
-| ![Contest Manager](./public/screenshots/contest-manager.png) | ![Skills](./public/screenshots/skills.png) |
 
 ## ✨ Implementation Deep-Dive
 
