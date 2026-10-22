@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --bg:            #f1f5f9;
-  --bg-card:       rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.97);
-  --border:        rgba(15, 23, 42, 0.10);
-  --text-primary:  #0f172a;
-  --text-muted:    #475569;
-}
-
-.dark {
   --bg:            #000000;
   --bg-card:       rgba(255, 255, 255, 0.05);
   --bg-card-hover: rgba(255, 255, 255, 0.09);
@@ -20,27 +11,53 @@
   --text-muted:    #94a3b8;
 }
 
-html { scroll-behavior: smooth; }
+html.dark {
+  --bg:            #000000;
+  --bg-card:       rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.09);
+  --border:        rgba(255, 255, 255, 0.10);
+  --text-primary:  #ffffff;
+  --text-muted:    #94a3b8;
+}
 
+html:not(.dark) {
+  --bg:            #f1f5f9;
+  --bg-card:       rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.97);
+  --border:        rgba(15, 23, 42, 0.10);
+  --text-primary:  #0f172a;
+  --text-muted:    #475569;
+}
+
+html.smooth-scroll { scroll-behavior: smooth; }
+
+/* Completely hide scrollbars across all browsers */
+html,
 body {
   overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text-primary);
-  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-              color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-*, *::before, *::after {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Smooth theme transitions without delaying initial DOM paint */
+body.theme-ready,
+body.theme-ready *,
+body.theme-ready *::before,
+body.theme-ready *::after {
   transition-property: background-color, border-color, color, fill, stroke, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 400ms;
+  transition-duration: 350ms;
 }
-
-body::-webkit-scrollbar { display: none; }
 
 html:not(.dark) .text-white            { color: #0f172a !important; }
 html:not(.dark) .text-gray-100,
@@ -153,6 +170,87 @@ html:not(.dark) .shadow-\[0_0_20px_rgba\(34\,211\,238\,0\.3\)\] {
 }
 html:not(.dark) .hover\:shadow-\[0_0_30px_rgba\(34\,211\,238\,0\.5\)\]:hover {
   box-shadow: 0 8px 25px rgba(8, 145, 178, 0.35) !important;
+}
+
+html:not(.dark) [class*="bg-slate-900"] {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html:not(.dark) [class*="bg-slate-950"] {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html:not(.dark) [class*="ring-white/"] {
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Hero Continuous Ticker in Light Mode */
+html:not(.dark) .smooth-ticker a {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+}
+
+html:not(.dark) .smooth-ticker a:hover {
+  background-color: #ffffff !important;
+  border-color: rgba(8, 145, 178, 0.40) !important;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.10) !important;
+}
+
+html:not(.dark) .smooth-ticker [class*="bg-black/60"] {
+  background-color: rgba(241, 245, 249, 1) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Light Mode Subtitle & Badge Contrast */
+html:not(.dark) .text-orange-300\/90,
+html:not(.dark) .text-orange-300\/80,
+html:not(.dark) .text-orange-300 {
+  color: #c2410c !important;
+}
+
+html:not(.dark) .text-blue-300\/90,
+html:not(.dark) .text-blue-300\/80,
+html:not(.dark) .text-blue-300 {
+  color: #1d4ed8 !important;
+}
+
+html:not(.dark) .text-yellow-300\/90,
+html:not(.dark) .text-yellow-300\/80,
+html:not(.dark) .text-yellow-300 {
+  color: #a16207 !important;
+}
+
+html:not(.dark) .text-emerald-300\/90,
+html:not(.dark) .text-emerald-300\/80,
+html:not(.dark) .text-emerald-300 {
+  color: #047857 !important;
+}
+
+html:not(.dark) .text-purple-300,
+html:not(.dark) .text-purple-200 {
+  color: #6d28d9 !important;
+}
+
+html:not(.dark) .bg-purple-500\/20 {
+  background-color: rgba(147, 51, 234, 0.15) !important;
+}
+
+html:not(.dark) .bg-emerald-500\/15,
+html:not(.dark) .bg-emerald-500\/20 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+/* Charts in Light Mode */
+html:not(.dark) .contest-grid-line,
+html:not(.dark) .recharts-cartesian-grid line {
+  stroke: rgba(15, 23, 42, 0.10) !important;
+}
+
+html:not(.dark) .recharts-text {
+  fill: #475569 !important;
 }
 
 html:not(.dark) .blur.opacity-20 { opacity: 0.08 !important; }
