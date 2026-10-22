@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nithish Reddy Kesavarapu</title>
+    <title>Abhijith Kumar Yandrapu | Full Stack Developer & Problem Solver</title>
+    <meta name="description" content="Portfolio of Abhijith Kumar Yandrapu - Full Stack Developer, B.Tech CSE @ IIIT Ranchi, passionate about scalable backend architecture, real-time distributed systems, and modern web applications." />
+    <meta name="keywords" content="Abhijith Kumar Yandrapu, Full Stack Developer, IIIT Ranchi, MERN Stack, React, Node.js, Socket.io, Software Engineer" />
+    <meta name="author" content="Abhijith Kumar Yandrapu" />
+    <meta property="og:title" content="Abhijith Kumar Yandrapu | Portfolio" />
+    <meta property="og:description" content="Full Stack Developer & Competitive Programmer building scalable backend systems and real-time web applications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/AbhijithKumar-07" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var isDark = saved ? saved === 'dark' : true;
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
+    <script>
+      // Immediately restore scroll on page reload before DOM paint
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      try {
+        const hash = window.location.hash;
+        const saved = sessionStorage.getItem('portfolio_active_section');
+        const id = (hash ? hash.replace('#', '') : '') || (saved && saved !== 'home' ? saved : '');
+        if (id && id !== 'home') {
+          const restore = () => {
+            const el = document.getElementById(id);
+            if (el) {
+              el.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
+          };
+          restore();
+          window.addEventListener('DOMContentLoaded', restore);
+        }
+      } catch (e) {}
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

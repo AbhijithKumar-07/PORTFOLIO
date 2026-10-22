@@ -1,37 +1,26 @@
-
 export const experiences = [
   {
-    role: "SDE Backend Intern",
-    company: "Code Inbound LLP",
+    role: "Full Stack Developer Intern",
+    company: "Orion Eduverse",
     location: "Remote",
-    period: "Oct 2025 – Mar 2026",
+    period: "Feb 2026 – Mar 2026",
     description: [
-      "Debugged and optimized REST APIs within a large-scale Network Monitoring System (NMS) to enhance stability and maintainability.",
-      "Conducted backend testing including API validation and error handling to ensure reliable system performance.",
-      "Collaborated with cross-functional teams using GitHub for version control, following Agile development practices."
+      "Engineered an end-to-end session management architecture to facilitate seamless mentor-student interactions, driving a significant surge in user engagement.",
+      "Fortified platform authentication by migrating password hashing protocols from bcrypt to Argon2id, significantly enhancing resistance against brute-force and GPU-based attacks.",
+      "Automated the deployment lifecycle by establishing a robust CI/CD pipeline with GitHub Actions and Docker, ensuring reliable application releases and secure management of secrets."
     ],
-    tags: ["REST APIs", "Node.js", "GitHub", "Agile", "Testing"]
+    tags: ["Full Stack", "Session Management", "Argon2id", "CI/CD", "Docker", "GitHub Actions", "Node.js"]
   },
   {
-    role: "Data Scientist Intern",
-    company: "EvoAstra Ventures Pvt. Ltd.",
+    role: "Software Development Intern",
+    company: "Hawk Aerospace",
     location: "Remote",
-    period: "Sep 2025 – Oct 2025",
+    period: "Sep 2025 – Dec 2025",
     description: [
-      "Scraped 500+ market records and deployed ML models to drive business insights.",
-      "Analyzed user behavior data to formulate customer experience strategies for a telecom client."
+      "Architected a centralized Web Admin Dashboard to unify real-time data streams across multiple operational modules, streamlining platform-wide governance and control.",
+      "Spearheaded frontend development for the corporate landing page, designing state-driven, interactive components to seamlessly showcase product capabilities and elevate UI/UX.",
+      "Developed a robust Node.js middleware for real-time data synchronization between Firebase and MongoDB, providing a consolidated data source for analytics."
     ],
-    tags: ["Python", "Machine Learning", "Data Scraping", "ML Models", "Analytics"]
-  },
-  {
-    role: "Artificial Intelligence Trainee",
-    company: "Jyesta Corporate Entity",
-    location: "Remote",
-    period: "Jul 2025 – Sep 2025",
-    description: [
-      "Developed an NLP chatbot pipeline processing 1,000+ intent records using Python.",
-      "Improved regression model accuracy by 15% through feature engineering with Scikit-learn."
-    ],
-    tags: ["Python", "NLP", "Machine Learning", "Scikit-learn", "Data Preprocessing", "Feature Engineering"]
+    tags: ["React.js", "Node.js", "Firebase", "MongoDB", "Real-Time Sync", "WebSockets", "Admin Dashboard"]
   }
 ];

@@ -1,18 +1,18 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "homepage": "https://github.com/nithishkesavarapu-code/Portfolio#readme",
+  "description": "Personal Portfolio of Abhijith Kumar Yandrapu - Full Stack Developer",
+  "homepage": "https://github.com/AbhijithKumar-07/Portfolio#readme",
   "bugs": {
-    "url": "https://github.com/nithishkesavarapu-code/Portfolio/issues"
+    "url": "https://github.com/AbhijithKumar-07/Portfolio/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nithishkesavarapu-code/Portfolio.git"
+    "url": "git+https://github.com/AbhijithKumar-07/Portfolio.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "Abhijith Kumar Yandrapu",
   "type": "module",
   "main": "eslint.config.js",
   "scripts": {

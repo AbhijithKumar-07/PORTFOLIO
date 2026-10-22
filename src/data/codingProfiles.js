@@ -1,27 +1,74 @@
-
 export const codingProfiles = [
   {
     platform: "LeetCode",
-    username: "@NithishK01",
-    url: "https://leetcode.com/u/NithishK01/",
+    username: "@AbhijithKumarDev",
+    url: "https://leetcode.com/u/AbhijithKumarDev/",
     stats: [
-      { label: "Problems Solved", value: "100+" },
-      { label: "Rating", value: "1675+" },
-      { label: "Rank", value: "Knight" }
+      { label: "Rating & Tier", value: "1961 · Knight" },
+      { label: "Contest Rank", value: "Top 3.26%" },
+      { label: "Best Contest Rank", value: "Global #215" }
     ],
     color: "from-orange-500/20 to-yellow-500/10",
     borderHover: "hover:border-orange-400/40",
     glow: "hover:shadow-[0_0_30px_rgba(249,115,22,0.15)]",
     accent: "text-orange-400",
     badge: "#F89F1B",
-    icon: "🔥"
+    iconKey: "LeetCode"
+  },
+  {
+    platform: "Codeforces",
+    username: "@AbhijithKumar07",
+    url: "https://codeforces.com/profile/AbhijithKumar07",
+    stats: [
+      { label: "Max Rating", value: "1495" },
+      { label: "Rank", value: "Specialist" },
+      { label: "Global Rank", value: "103 (Rd 1091)" }
+    ],
+    color: "from-blue-600/20 to-indigo-500/10",
+    borderHover: "hover:border-blue-400/40",
+    glow: "hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]",
+    accent: "text-blue-400",
+    badge: "#1f8acb",
+    iconKey: "Codeforces"
+  },
+  {
+    platform: "CodeChef",
+    username: "@abhijith_07",
+    url: "https://www.codechef.com/users/abhijith_07",
+    stats: [
+      { label: "Rating", value: "1749" },
+      { label: "Stars", value: "3★" },
+      { label: "Global Rank", value: "23 (Starters 240)" }
+    ],
+    color: "from-amber-600/20 to-yellow-500/10",
+    borderHover: "hover:border-amber-400/40",
+    glow: "hover:shadow-[0_0_30px_rgba(251,191,36,0.15)]",
+    accent: "text-amber-400",
+    badge: "#D3841F",
+    iconKey: "CodeChef"
+  },
+  {
+    platform: "GeeksforGeeks",
+    username: "@abhiyandr5wci",
+    url: "https://www.geeksforgeeks.org/profile/abhiyandr5wci?tab=activity",
+    stats: [
+      { label: "Coding Score", value: "118" },
+      { label: "Problems Solved", value: "31 (3 Hard)" },
+      { label: "Recent Focus", value: "Graph Theory & DAG" }
+    ],
+    color: "from-emerald-600/20 to-teal-500/10",
+    borderHover: "hover:border-emerald-400/40",
+    glow: "hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]",
+    accent: "text-emerald-400",
+    badge: "#2f8d46",
+    iconKey: "GeeksforGeeks"
   },
   {
     platform: "GitHub",
-    username: "@nithishkesavarapu-code",
-    url: "https://github.com/nithishkesavarapu-code",
+    username: "@AbhijithKumar-07",
+    url: "https://github.com/AbhijithKumar-07",
     stats: [
-      { label: "Repositories", value: "Public" },
+      { label: "Repositories", value: "35+ Public" },
       { label: "Open Source", value: "Active" },
       { label: "Contributions", value: "Regular" }
     ],
@@ -30,38 +77,6 @@ export const codingProfiles = [
     glow: "hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]",
     accent: "text-white",
     badge: "#ffffff",
-    icon: "🐙"
-  },
-  {
-    platform: "Codeforces",
-    username: "@nithish_5819",
-    url: "https://codeforces.com/profile/nithish_5819",
-    stats: [
-      { label: "Max Rating", value: "1387" },
-      { label: "Platform", value: "Codeforces" },
-      { label: "Rank", value: "Specialist" }
-    ],
-    color: "from-blue-600/20 to-indigo-500/10",
-    borderHover: "hover:border-blue-400/40",
-    glow: "hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]",
-    accent: "text-blue-400",
-    badge: "#1f8acb",
-    icon: "📊"
-  },
-  {
-    platform: "CodeChef",
-    username: "@nithishk01",
-    url: "https://www.codechef.com/users/nithishk01",
-    stats: [
-      { label: "Rating", value: "1703" },
-      { label: "Stars", value: "4★" },
-      { label: "Platform", value: "CodeChef" }
-    ],
-    color: "from-amber-600/20 to-yellow-500/10",
-    borderHover: "hover:border-amber-400/40",
-    glow: "hover:shadow-[0_0_30px_rgba(251,191,36,0.15)]",
-    accent: "text-amber-400",
-    badge: "#D3841F",
-    icon: "🥘"
+    iconKey: "GitHub"
   }
 ];
