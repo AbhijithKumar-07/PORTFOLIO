@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send, MessageSquare, User, AtSign, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, MessageSquare, User, AtSign, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -41,11 +41,15 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: `New Portfolio Message from ${formData.name}`,
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || "1d43139f-17be-4906-8032-7570dec40b20",
+          subject: `Personal Portfolio Form Submission from ${formData.name}`,
+          from_name: `${formData.name} via Personal Portfolio Form Submission`,
+          replyto: formData.email,
+          "Sender Name": formData.name,
+          "Sender Email": formData.email,
+          "Message Content": formData.message,
+          "Sent From": "Abhijith Kumar Yandrapu - Personal Portfolio Website",
+          "Timestamp": new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata", dateStyle: "full", timeStyle: "medium" }),
         }),
       });
 
@@ -64,7 +68,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative z-10 py-20 md:py-32 mb-20">
+    <section id="contact" className="relative z-10 py-12 md:py-16 mb-8 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         <motion.div
@@ -73,23 +77,23 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
         >
-          <div className="flex flex-col items-center text-center mb-16">
+          <div className="flex flex-col items-center text-center mb-10 md:mb-12">
             <motion.h2 
               variants={fadeUp}
-              className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4 md:mb-6 py-4 leading-normal"
+              className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4 py-1 leading-normal"
             >
               Let's Connect
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-gray-400 text-base md:text-lg max-w-2xl px-2 md:px-0">
-              Currently seeking new opportunities to build highly impactful applications. Whether you have a question or just want to say hi, my inbox is always open!
+            <motion.p variants={fadeUp} className="text-gray-300 text-base md:text-lg max-w-2xl px-2 md:px-0 leading-relaxed font-light">
+              Open to software engineering opportunities and professional collaborations. Whether you have a question or just want to say hi, my inbox is always open!
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-stretch">
             
             <motion.div 
               variants={fadeUp}
-              className="flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-3xl backdrop-blur-md bg-black/40 border border-white/10 shadow-2xl"
+              className="flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-3xl backdrop-blur-xl bg-slate-900/80 border border-white/15 ring-1 ring-white/5 shadow-[0_12px_40px_rgba(0,0,0,0.6)]"
             >
               <div>
                 <h3 className="text-3xl font-bold text-white mb-8">Get In Touch</h3>
@@ -101,8 +105,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-400 mb-1">Email</p>
-                      <a href="mailto:nithish.kesavarapu@gmail.com" className="text-base md:text-lg text-white font-medium group-hover:text-cyan-300 transition-colors break-all">
-                        nithish.kesavarapu@gmail.com
+                      <a href="mailto:abhiyandrapu1106@gmail.com" className="text-base md:text-lg text-white font-medium group-hover:text-cyan-300 transition-colors break-all">
+                        abhiyandrapu1106@gmail.com
                       </a>
                     </div>
                   </div>
@@ -114,24 +118,50 @@ const Contact = () => {
                     <div>
                       <p className="text-sm text-gray-400 mb-1">Location</p>
                       <p className="text-lg text-white font-medium group-hover:text-blue-300 transition-colors">
-                        India
+                        Ranchi, Jharkhand, India
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-16">
-                <p className="text-sm text-gray-400 mb-4">Connect on Socials</p>
-                <div className="flex gap-4">
-                  <a href="https://github.com/nithishkesavarapu-code" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 border border-white/5 hover:border-white/20">
-                    <Github size={22} />
+              <div className="mt-12 pt-8 border-t border-white/10">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                  <p className="text-sm font-medium text-gray-300">
+                    Connect on Socials
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <a 
+                    href="https://github.com/AbhijithKumar-07" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3.5 rounded-2xl bg-white/5 hover:bg-white/15 text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 border border-white/10 hover:border-white/25 shadow-md flex items-center justify-center group" 
+                    title="GitHub"
+                    aria-label="GitHub"
+                  >
+                    <Github size={20} className="group-hover:scale-110 transition-transform" />
                   </a>
-                  <a href="https://www.linkedin.com/in/nithish-reddy-kesavarapu/" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 border border-white/5 hover:border-blue-400/30">
-                    <Linkedin size={22} />
+                  <a 
+                    href="https://www.linkedin.com/in/abhijith-kumar-yandrapu-079899339/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3.5 rounded-2xl bg-white/5 hover:bg-blue-500/20 text-gray-300 hover:text-blue-400 transition-all duration-300 hover:scale-105 border border-white/10 hover:border-blue-400/30 shadow-md flex items-center justify-center group" 
+                    title="LinkedIn"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
                   </a>
-                  <a href="https://x.com/NithishK01" target="_blank" className="p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110 border border-white/5 hover:border-cyan-400/30">
-                    <Twitter size={22} />
+                  <a 
+                    href="https://www.instagram.com/abhi36_96/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3.5 rounded-2xl bg-white/5 hover:bg-rose-500/20 text-gray-300 hover:text-rose-400 transition-all duration-300 hover:scale-105 border border-white/10 hover:border-rose-400/30 shadow-md flex items-center justify-center group" 
+                    title="Instagram"
+                    aria-label="Instagram"
+                  >
+                    <Instagram size={20} className="group-hover:scale-110 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -144,7 +174,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="relative p-8 md:p-10 rounded-3xl backdrop-blur-xl bg-black/60 border border-white/10 shadow-2xl flex flex-col gap-6 h-full"
+                className="relative p-8 md:p-10 rounded-3xl backdrop-blur-xl bg-slate-900/80 border border-white/15 ring-1 ring-white/5 shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex flex-col gap-6 h-full"
               >
                 
                 <div className="flex flex-col gap-2">
@@ -160,7 +190,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="nithish" 
+                      placeholder="Your Name" 
                       className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-cyan-400/50 focus:bg-white/10 text-white placeholder-gray-500 transition-all duration-300"
                     />
                   </div>
@@ -179,7 +209,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="nithish@example.com" 
+                      placeholder="your.email@example.com" 
                       className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl outline-none focus:border-cyan-400/50 focus:bg-white/10 text-white placeholder-gray-500 transition-all duration-300"
                     />
                   </div>

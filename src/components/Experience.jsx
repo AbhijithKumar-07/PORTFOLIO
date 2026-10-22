@@ -17,15 +17,15 @@ const fadeLeft = {
 
 const Experience = () => {
   return (
-    <section id="experience" className="relative z-10 py-20 md:py-32">
+    <section id="experience" className="relative z-10 py-12 md:py-16 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.15 }}
           variants={stagger}
         >
-          <div className="flex items-center gap-3 md:gap-4 mb-12 md:mb-20">
+          <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
             <div className="p-3 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
               <Briefcase className="text-blue-400" size={30} />
             </div>
@@ -40,7 +40,7 @@ const Experience = () => {
           <div className="relative">
             <div className="absolute top-0 left-5 md:left-8 bottom-0 w-px bg-gradient-to-b from-blue-500/60 via-purple-500/40 to-transparent" />
 
-            <div className="space-y-8 md:space-y-10">
+            <div className="space-y-6 md:space-y-8">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
@@ -55,7 +55,7 @@ const Experience = () => {
 
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="flex-1 p-7 md:p-8 rounded-3xl backdrop-blur-md bg-black/50 border border-white/10 hover:border-purple-400/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] transition-all duration-500"
+                    className="flex-1 p-6 sm:p-7 md:p-8 rounded-3xl backdrop-blur-xl bg-slate-900/80 border border-white/15 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] ring-1 ring-white/5 shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                       <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
