@@ -1,12 +1,15 @@
 # 🚀 Abhijith Kumar Yandrapu — Full-Stack Developer & Problem Solver
 
 <p align="center">
+  <a href="https://abhijithkumar-portfolio.onrender.com/"><img src="https://img.shields.io/badge/Live%20Portfolio-abhijithkumar--portfolio.onrender.com-00b4d8?style=for-the-badge&logo=render&logoColor=white" alt="Live Portfolio"></a>
   <a href="https://leetcode.com/u/AbhijithKumarDev/"><img src="https://img.shields.io/badge/LeetCode-1961%20(Knight)-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
   <a href="https://codeforces.com/profile/AbhijithKumar07"><img src="https://img.shields.io/badge/Codeforces-1495%20(Specialist)-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" alt="Codeforces"></a>
   <a href="https://www.codechef.com/users/abhijith_07"><img src="https://img.shields.io/badge/CodeChef-1749%20(3★)-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"></a>
   <a href="https://github.com/AbhijithKumar-07"><img src="https://img.shields.io/badge/GitHub-AbhijithKumar--07-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="https://www.linkedin.com/in/abhijith-kumar-yandrapu-079899339/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 </p>
+
+> 🌐 **Live Website**: [https://abhijithkumar-portfolio.onrender.com](https://abhijithkumar-portfolio.onrender.com)
 
 ---
 

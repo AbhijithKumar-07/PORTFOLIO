@@ -223,7 +223,7 @@ export default function NeuralBackground() {
   return (
     <div
       ref={mountRef}
-      className={`fixed inset-0 pointer-events-none transition-opacity duration-1000 ${isDark ? 'bg-black' : 'bg-slate-50'}`}
+      className={`fixed inset-0 pointer-events-none transition-colors duration-700 ease-in-out ${isDark ? 'bg-black' : 'bg-slate-50'}`}
       style={{ zIndex: -50 }}
     />
   );

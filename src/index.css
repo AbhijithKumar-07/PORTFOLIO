@@ -49,14 +49,12 @@ body::-webkit-scrollbar,
   height: 0 !important;
 }
 
-/* Smooth theme transitions without delaying initial DOM paint */
+/* Smooth, luxurious theme transitions across all surfaces, text, and borders */
 body.theme-ready,
-body.theme-ready *,
-body.theme-ready *::before,
-body.theme-ready *::after {
+body.theme-ready * {
   transition-property: background-color, border-color, color, fill, stroke, box-shadow;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-duration: 500ms;
 }
 
 html:not(.dark) .text-white            { color: #0f172a !important; }

@@ -17,11 +17,13 @@ export const ThemeProvider = ({ children }) => {
     }
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-    // Enable smooth theme switching after initial render to avoid flash
-    const timer = setTimeout(() => {
-      document.body.classList.add('theme-ready');
-    }, 150);
-    return () => clearTimeout(timer);
+    // Enable smooth theme switching across all elements
+    if (!document.body.classList.contains('theme-ready')) {
+      const timer = setTimeout(() => {
+        document.body.classList.add('theme-ready');
+      }, 50);
+      return () => clearTimeout(timer);
+    }
   }, [isDark]);
 
   const toggleTheme = () => setIsDark(prev => !prev);
