@@ -68,13 +68,13 @@ export default function NeuralBackground() {
     textureLoaderRef.current.setCrossOrigin("anonymous");
     fallbackTextureRef.current = fallbackTexture;
 
-    const spriteOpacity = isDark ? 0.15 : 0.25;
+    const spriteOpacity = isDark ? 0.08 : 0.12;
 
     for (let i = 0; i < particlesCount; i++) {
       const material = new THREE.SpriteMaterial({
         map: fallbackTexture,
         transparent: true,
-        opacity: spriteOpacity,
+        opacity: 0, // start subtle and fade in
       });
 
       const sprite = new THREE.Sprite(material);
@@ -83,7 +83,7 @@ export default function NeuralBackground() {
         (Math.random() - 0.5) * 100,
         (Math.random() - 0.5) * 100
       );
-      sprite.scale.set(12, 12, 1);
+      sprite.scale.set(10, 10, 1);
       scene.add(sprite);
       sprites.push(sprite);
       spritesRef.current.push(sprite);
@@ -168,7 +168,7 @@ export default function NeuralBackground() {
   }, []);
 
   useEffect(() => {
-    const spriteOpacity = isDark ? 0.15 : 0.25;
+    const spriteOpacity = isDark ? 0.12 : 0.20;
     const iconColor = isDark ? "white" : "334155";
     const lineColor = isDark ? 0x3b82f6 : 0x6366f1;
     const lineOpacity = isDark ? 0.2 : 0.15;
@@ -223,7 +223,7 @@ export default function NeuralBackground() {
   return (
     <div
       ref={mountRef}
-      className={`fixed inset-0 pointer-events-none transition-colors duration-500 ${isDark ? 'bg-black' : 'bg-slate-50'}`}
+      className={`fixed inset-0 pointer-events-none transition-opacity duration-1000 ${isDark ? 'bg-black' : 'bg-slate-50'}`}
       style={{ zIndex: -50 }}
     />
   );

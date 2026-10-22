@@ -16,6 +16,12 @@ export const ThemeProvider = ({ children }) => {
       root.classList.remove('dark');
     }
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    // Enable smooth theme switching after initial render to avoid flash
+    const timer = setTimeout(() => {
+      document.body.classList.add('theme-ready');
+    }, 150);
+    return () => clearTimeout(timer);
   }, [isDark]);
 
   const toggleTheme = () => setIsDark(prev => !prev);
