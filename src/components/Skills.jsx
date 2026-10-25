@@ -74,20 +74,26 @@ const Skills = () => {
     <section id="skills" className="relative z-10 py-12 md:py-16 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5, margin: "-30px 0px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex items-center gap-3 md:gap-4 mb-8 md:mb-10"
+        >
           <div className="p-3 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md">
             <Code2 className="text-cyan-400" size={30} />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 py-1.5 leading-normal">
             Technical Arsenal
           </h2>
-        </div>
+        </motion.div>
 
         {/* 3-Column Grid with rich, visible staggered entrance */}
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.12 }}
+          viewport={{ once: false, amount: 0.15, margin: "-40px 0px" }}
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 items-stretch"
         >

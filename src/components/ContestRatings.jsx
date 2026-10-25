@@ -13,13 +13,24 @@ import {
 } from './icons/PlatformIcons';
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 48, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1, 
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } 
+  }
 };
 
 const stagger = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  visible: { 
+    opacity: 1, 
+    transition: { 
+      staggerChildren: 0.12,
+      delayChildren: 0.05
+    } 
+  }
 };
 
 export default function ContestRatings({ contestData }) {
@@ -35,7 +46,7 @@ export default function ContestRatings({ contestData }) {
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.5, margin: "-30px 0px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex items-center gap-3 md:gap-4 mb-6 md:mb-10 overflow-visible"
         >
@@ -51,7 +62,7 @@ export default function ContestRatings({ contestData }) {
         <motion.div 
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.12 }}
+          viewport={{ once: false, amount: 0.15, margin: "-40px 0px" }}
           variants={stagger}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-5"
         >
