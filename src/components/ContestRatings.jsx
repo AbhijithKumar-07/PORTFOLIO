@@ -239,48 +239,48 @@ export default function ContestRatings({ contestData }) {
             </div>
           </motion.div>
 
-          {/* GitHub Card */}
+          {/* GitHub Card - Authentic GitHub Dark / Black Theme */}
           <motion.div 
             variants={fadeUp}
             whileHover={{ y: -5, scale: 1.01 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="group relative p-5 sm:p-6 rounded-2xl backdrop-blur-xl bg-slate-900/80 dark:bg-zinc-950/80 border border-purple-500/30 hover:border-purple-500/60 ring-1 ring-white/5 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col justify-between"
+            className="group relative p-5 sm:p-6 rounded-2xl backdrop-blur-xl bg-slate-900/80 dark:bg-zinc-950/80 border border-slate-700/40 dark:border-zinc-700/50 hover:border-slate-400/60 dark:hover:border-zinc-400/60 ring-1 ring-white/5 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col justify-between"
           >
-            <div className="absolute -top-12 -right-12 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all pointer-events-none" />
+            <div className="absolute -top-12 -right-12 w-28 h-28 bg-slate-500/10 dark:bg-white/5 rounded-full blur-2xl group-hover:bg-slate-500/20 dark:group-hover:bg-white/10 transition-all pointer-events-none" />
             <div className="relative z-10">
               <div className="flex justify-between items-center mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-md group-hover:scale-105 transition-transform">
-                  <GitHubIcon size={24} className="text-purple-400" />
+                <div className="w-11 h-11 rounded-xl bg-slate-800/80 dark:bg-zinc-900 border border-slate-700/60 dark:border-zinc-700/60 flex items-center justify-center text-slate-100 shadow-md group-hover:scale-105 transition-transform">
+                  <GitHubIcon size={24} className="text-slate-900 dark:text-white" />
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-500/15 text-purple-300 border border-purple-500/30">
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-200 dark:bg-zinc-800 text-slate-800 dark:text-zinc-200 border border-slate-300 dark:border-zinc-700">
                   Version Control
                 </span>
               </div>
               
-              <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">GitHub</h3>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">GitHub</h3>
               <a 
                 href="https://github.com/AbhijithKumar-07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-purple-400/90 hover:text-purple-300 hover:underline inline-flex items-center gap-1 mt-0.5 mb-3"
+                className="text-xs text-slate-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:underline inline-flex items-center gap-1 mt-0.5 mb-3 font-mono"
               >
                 @AbhijithKumar-07 <ExternalLink size={10} />
               </a>
 
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">35+</span>
-                <span className="text-xs text-purple-300 font-medium">Public Repos</span>
+                <span className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">35+</span>
+                <span className="text-xs text-slate-600 dark:text-zinc-400 font-medium">Public Repos</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 pt-3 border-t border-white/10 text-xs mt-3 relative z-10">
+            <div className="grid grid-cols-2 gap-2 pt-3 border-t border-slate-200 dark:border-white/10 text-xs mt-3 relative z-10">
               <div>
-                <p className="text-gray-400 text-[10px] uppercase font-semibold tracking-wider">Repositories</p>
-                <p className="text-white font-bold mt-0.5 text-xs">35+ Active</p>
+                <p className="text-slate-500 dark:text-gray-400 text-[10px] uppercase font-semibold tracking-wider">Repositories</p>
+                <p className="text-slate-900 dark:text-white font-bold mt-0.5 text-xs">35+ Active</p>
               </div>
               <div>
-                <p className="text-gray-400 text-[10px] uppercase font-semibold tracking-wider">Activity</p>
-                <p className="text-white font-bold mt-0.5 text-xs">Daily Commits</p>
+                <p className="text-slate-500 dark:text-gray-400 text-[10px] uppercase font-semibold tracking-wider">Activity</p>
+                <p className="text-slate-900 dark:text-white font-bold mt-0.5 text-xs">Daily Commits</p>
               </div>
             </div>
           </motion.div>
