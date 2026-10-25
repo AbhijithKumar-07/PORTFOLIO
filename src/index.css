@@ -94,12 +94,7 @@ html:not(.dark) .to-blue-500             { --tw-gradient-to:   #1d4ed8 !importan
 html:not(.dark) .to-purple-400           { --tw-gradient-to:   #7c3aed !important; }
 
 html:not(.dark) [class*="border-white\/20"] {
-  border-color: rgba(15,23,42,0.30) !important;
-  color: #0f172a !important;
-}
-html:not(.dark) [class*="border-white\/20"]:hover {
-  background-color: #0f172a !important;
-  color: #ffffff !important;
+  border-color: rgba(15,23,42,0.18) !important;
 }
 
 html:not(.dark) [class*="bg-black\/50"] { background-color: rgba(255, 255, 255, 0.88) !important; }

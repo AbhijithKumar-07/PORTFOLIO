@@ -32,20 +32,26 @@ export default function ContestRatings({ contestData }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header with generous descender padding so 'g' in Coding is never clipped */}
-        <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-10 overflow-visible">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex items-center gap-3 md:gap-4 mb-6 md:mb-10 overflow-visible"
+        >
           <div className="p-3 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-md shrink-0">
             <Terminal className="text-cyan-400" size={30} />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400 pt-1 pb-3 px-1 leading-normal tracking-tight overflow-visible inline-block">
             Coding Profiles
           </h2>
-        </div>
+        </motion.div>
 
         {/* 5 Platform KPI Cards with balanced, polished alignment */}
         <motion.div 
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.12 }}
           variants={stagger}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-5"
         >
@@ -238,32 +244,32 @@ export default function ContestRatings({ contestData }) {
             variants={fadeUp}
             whileHover={{ y: -5, scale: 1.01 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="group relative p-5 sm:p-6 rounded-2xl backdrop-blur-xl bg-slate-900/80 dark:bg-zinc-950/80 border border-white/20 hover:border-white/40 ring-1 ring-white/5 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col justify-between"
+            className="group relative p-5 sm:p-6 rounded-2xl backdrop-blur-xl bg-slate-900/80 dark:bg-zinc-950/80 border border-purple-500/30 hover:border-purple-500/60 ring-1 ring-white/5 transition-all duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col justify-between"
           >
-            <div className="absolute -top-12 -right-12 w-28 h-28 bg-white/5 rounded-full blur-2xl group-hover:bg-white/15 transition-all pointer-events-none" />
+            <div className="absolute -top-12 -right-12 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all pointer-events-none" />
             <div className="relative z-10">
               <div className="flex justify-between items-center mb-3.5">
-                <div className="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
-                  <GitHubIcon size={24} className="text-white" />
+                <div className="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-md group-hover:scale-105 transition-transform">
+                  <GitHubIcon size={24} className="text-purple-400" />
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/10 text-gray-200 border border-white/20">
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-500/15 text-purple-300 border border-purple-500/30">
                   Version Control
                 </span>
               </div>
               
-              <h3 className="text-lg font-bold text-white group-hover:text-gray-200 transition-colors">GitHub</h3>
+              <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">GitHub</h3>
               <a 
                 href="https://github.com/AbhijithKumar-07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-400 hover:text-white hover:underline inline-flex items-center gap-1 mt-0.5 mb-3"
+                className="text-xs text-purple-400/90 hover:text-purple-300 hover:underline inline-flex items-center gap-1 mt-0.5 mb-3"
               >
                 @AbhijithKumar-07 <ExternalLink size={10} />
               </a>
 
               <div className="flex items-baseline gap-2 mb-1">
                 <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">35+</span>
-                <span className="text-xs text-gray-400 font-medium">Public Repos</span>
+                <span className="text-xs text-purple-300 font-medium">Public Repos</span>
               </div>
             </div>
 
