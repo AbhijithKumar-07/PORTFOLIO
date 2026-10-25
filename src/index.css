@@ -21,10 +21,10 @@ html.dark {
 }
 
 html:not(.dark) {
-  --bg:            #f1f5f9;
-  --bg-card:       rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.97);
-  --border:        rgba(15, 23, 42, 0.10);
+  --bg:            #f8fafc;
+  --bg-card:       rgba(255, 255, 255, 0.95);
+  --bg-card-hover: #ffffff;
+  --border:        rgba(15, 23, 42, 0.08);
   --text-primary:  #0f172a;
   --text-muted:    #475569;
 }

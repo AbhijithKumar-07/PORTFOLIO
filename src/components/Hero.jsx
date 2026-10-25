@@ -380,8 +380,8 @@ export default function Hero({ contestData }) {
           className="w-full max-w-full lg:max-w-[92%] mb-4 overflow-hidden relative group rounded-2xl"
         >
           {/* Edge gradient fade masks */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-slate-100 dark:from-[#030712] via-slate-100/90 dark:via-[#030712]/90 to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-slate-100 dark:from-[#030712] via-slate-100/90 dark:via-[#030712]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-[#f8fafc] dark:from-[#030712] via-[#f8fafc]/90 dark:via-[#030712]/90 to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#f8fafc] dark:from-[#030712] via-[#f8fafc]/90 dark:via-[#030712]/90 to-transparent z-10" />
 
           <style>{`
             @keyframes smoothTickerTrack {
